@@ -1,0 +1,238 @@
+teachermain:
+  suffix_path: 'Centerm\升腾云教室教学系统\TeacherMain.exe'
+  main:   # 主窗口
+    id:
+      title: 升腾云教室教学系统
+      class_name: '#32770'
+    try_btn:
+      title: '5 用户演示版'
+      class_name: Button
+  toolbar:
+    BtnLesson: u'课程控制Button'
+    BtnPower: u'电源控制Button'
+    BtnRemoteCommand: u'远程命令Button'
+    BtnPortabl: u'云校园管理Button’
+    BtnWorkspace: u'作业空间Button'
+    BtnForbiddenNet: 禁网Button
+  left_sider:
+    monitor_view:
+      auto_id: '104'
+      class_name: Button
+    policy_view:
+      auto_id: '108'
+      class_name: Button
+  RightSider:
+    toolbox:
+      BtnBlackScreen: u'黑屏安静Button'
+      BtnCancelBlack: u'取消黑屏安静Button'
+      BtnAutoConnect: u'自动连接Button'
+      BtnManageClass: u'管理班级Button'
+  menu:
+    class_name: 'Afx:00400000:3'
+  monitor_pane:
+    id:
+      title: "ELC Monitor View"
+    monitors:
+      class_name: AfxWnd80u
+      auto_id: '100'
+  policy_pane:
+    id:
+      title: ELC Policy View
+    clients_grid:
+      auto_id: '100'
+      class_name: SysListView32
+    policy_grid:
+      auto_id: '101'
+      class_name: SysListView32
+    policy_status:
+      blacklist: 黑名单
+      whitelist: 白名单
+      allopen: 全部开放
+    toolbar:
+      advance_btn:
+        title: 高级
+        control_type: Button
+      whitelist_btn:
+        title: 白名单
+        control_type: Button
+      blacklist_btn:
+        title: 黑名单
+        control_type: Button
+      allopen_btn:
+        title: 全部开放
+        control_type: Button
+      import_btn:
+        title: 导入Button
+        control_type: Button
+      export_btn:
+        title: 导出Button
+        control_type: Button
+    advance_win:
+      id:
+        title: 网页限制
+        class_name: '#32770'
+      white_tab:
+        title: 管理白名单
+      black_tab:
+        title: 管理黑名单
+      tab:
+        grid:
+          class_name: SysListView32
+        add_btn:
+          title: 添加(A)
+          class_name: Button
+        edit_btn:
+          title: 编辑(E)
+          class_name: Button
+        del_btn:
+          title: 删除(D)
+          class_name: Button
+      btn_dialog:
+        ok_btn:
+          title: 确定
+        cancal_btn:
+          title: 取消
+        app_btn:
+          title: 应用(A)
+      add_win:
+        id:
+          title: URL
+          class_name: '#32770'
+        url:
+          title: 'URL：'
+          class_name: Edit
+        description:
+          title: '描述：'
+          class_name: Edit
+        ok:
+          title: 确定
+        cancel:
+          title: 取消
+  # 下拉菜单
+  LessonMenu:
+    Start: 1
+    Stop: 2
+    Restart: 3
+    ClassOver: 4
+    ExamMode: 5
+  PowerMenu:
+    Wakeup: 1
+    Restart: 2
+    Poweroff: 3
+    Wakeup_host: 4
+  RemoteCommandMenu:
+    StartApp: 1
+    OpenWeb: 2
+  # 运行应用程序
+  run_app:
+    id:
+      title: 运行应用程序
+      class_name: '#32770'
+    add_btn:
+      auto_id: '1113'
+      class_name: Button
+    add_pane: # 添加程序窗口
+      id:
+        title: 添加程序
+        class_name: '#32770'
+      name:
+        auto_id: '1053'
+        class_name: Edit
+      excute_path:
+        auto_id: '1009'
+        class_name: Edit
+      parameter:
+        auto_id: '1010'
+        class_name: Edit
+      window_mode:
+        title: 打开
+        auto_id: 'DropDown'
+        control_type: Button
+      ok:
+        title: 确定
+  open_webpage:   # 打开网页窗口
+    id:
+      title: 打开网页
+    add_btn:
+      auto_id: '1003'
+      class_name: Button
+    add_pane: # 新的网址
+      id:
+        title: 新的网址
+        class_name: '#32770'
+      name:
+        auto_id: '7109'
+        class_name: Edit
+      page_url:
+        auto_id: '7110'
+        class_name: Edit
+      ok:
+        title: 确定
+  pop_win:  # 运行应用程序的弹出框中的通用控件
+    data_grid:
+      class_name: SysListView32
+    remote_btn:
+      title: 远程执行
+    local_btn:
+      title: 本地执行
+    exit:
+      title: 关闭
+      control_type: Button
+TaskBar:  # 任务栏
+    id:
+      class_name: Shell_TrayWnd
+    teacher_icon:
+      class_name: 升腾云教室教学系统
+    teacher_menu:
+      id:
+        title: 上下文
+        class_name: "#32768"
+      display_win:
+        title: 显示窗口(W)
+      exit:
+        title: 退出(X)
+# 登录窗口
+logon_win:
+    id:
+      title: 系统登录
+      class_name: "#32770"
+    user:
+      title: '教师姓名(N):'
+      control_type: Edit
+    passwd:
+      title: '登录密码(P):'
+      control_type: Edit
+    logon_btn:
+      title: 登录(L)
+      class_name: Button
+# 课程选择窗口
+lesson_win:
+    id:
+      title: 云教室教学系统
+      class_name: 云教室教学系统
+    pane:
+      id:
+        class_name: AfxFrameOrView90s
+    exit:
+      title: 关闭
+      control_type: Button
+    confirm:
+      id:
+        title: 云教室教学系统
+      ok:
+        title: 是(Y)
+        class_name: Button
+      ng:
+        title: 否(N)
+        class_name: Button
+portal:
+  id:
+    title: 云校园管理平台
+workspace:
+  id:
+    title: 教师登录界面
+# 素材
+img:
+  path: src   # src目录，用于存放模板匹配用的素材
+  quiet: 'quiet.jpg' # 黑屏安静标识的模板
+  app: 'app.jpg' # 运行应用程序的模板

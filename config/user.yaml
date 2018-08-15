@@ -1,0 +1,57 @@
+teachermain:
+  login:
+    user: admin
+    passwd: 1
+  stability:
+    lesson_name: Win7
+    wait: 60
+    loop: 1
+  power_manage:
+    wait_shutdown: 10
+    wait_wakeup_tc: 50
+    wait_shutdown_host: 120
+    wait_wakeup_host: 500
+  lesson:
+    timeout_start: 300
+    timeout_stop: 120
+    timeout_switch: 120
+    wait_quiet: 30
+  remote_app:
+    app_name: PhotoViewer
+    app_path: C:\Windows\System32\rundll32.exe
+    app_arg: '"C:\Program{SPACE}Files\Windows{SPACE}Photo{SPACE}Viewer\PhotoViewer.dll",{SPACE}ImageView_Fullscreen{SPACE}I:\Chrysanthemum.jpg'
+    app_mode:
+      title: 最大
+    run_wait: 30
+  remote_page:
+    page_name: Pattern
+    page_url: http://192.168.1.1
+    run_wait: 30
+  policy_white:
+    url: http://192.168.1.1
+    description: 白名单描述
+  policy_black:
+    url: http://192.168.1.1
+    description: 黑名单描述
+host:
+  ip: '192.168.100.2'
+  port: 9022    # 日志访问端口，也用于在线监测
+  user: root
+  password: centerm
+  start_threshold: 120
+  log_path: '/var/log/ivycloud'
+  log_files:
+   - vClassroom.log
+   - vCompute.log
+   - vDesktop.log
+   - vController.log
+   - vMonitor.log
+tc:
+  num: 3
+  pattern: '192.168.102.0'
+  timeout: 2    # 判断是否在线的超时时间
+  listen_port: 8000 # 判断是否在线的监听端口
+log:
+  suffix_path: log
+  client_log:
+   - teacherClient.txt

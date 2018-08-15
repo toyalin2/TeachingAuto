@@ -1,0 +1,11 @@
+{
+  "test_clients.py::test_launch_app": true,
+  "test_lesson.py::test_shutdown_tcs": true,
+  "test_lesson.py::test_start_lesson": true,
+  "test_lesson.py::test_wakeup_host": true,
+  "test_lesson.py::test_wakeup_tcs": true,
+  "test_portal.py::test_enter_portal": true,
+  "test_power_manage.py::test_class_over": true,
+  "test_power_manage.py::test_restart_tcs": true,
+  "test_power_manage.py::test_shutdown_tcs": true
+}
